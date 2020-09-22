@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body{
   background-color: #f6f6f6;
 }
@@ -105,8 +108,19 @@ article{
 }
 
 aside{
-  width: 40%;
+  width: 30%;
   float: right;
+  padding: 20px 60px;
+  margin-top: 10%;
+  background: white;
+  transform: perspective(900px) rotateX(45deg);
+  transition: .5s all ease;
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+
+}
+
+aside:hover{
+  transform: rotateX(0);
 }
 
 @keyframes clockwise {
@@ -186,3 +200,4 @@ aside{
     right: 0;    
   }
 }
+
