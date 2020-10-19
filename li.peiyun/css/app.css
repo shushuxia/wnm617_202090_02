@@ -83,10 +83,115 @@ a:hover {
    width: 100%;
    height: 100%;
    overflow: auto;
+   
+
+}
+
+.tabgroup {}
+.tabgroup .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 2em;
+    padding: 0.5em 0;
+    border-top: 2px solid var(--color-neutral-light);
+
+}
+.tabgroup .tab {
+    padding: 0.5em 2em;
+   
+    position:relative;
+    color: var(--color-neutral-light);
+}
+.tabgroup .tab:hover {
+    cursor:pointer;
+}
+
+.tabgroup .tab.active{
+   font-weight: bold;
+}
+.tabgroup .contents {
+   height:65vh;
+   margin: 0.5em;
+   overflow:hidden;
+   position:relative;
+}
+.tabgroup .content {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   overflow:auto;
+   pointer-events:none;
+   opacity:0;
+   transition:all 0.3s;
+  
+}
+
+.content-map{
+object-fit: center;
+height: 100vw;
+
+}
+
+.content-map img{
+  width: 100vw;
+ z-index: -100;
+  margin: auto 0;
+}
+
+.tabgroup .content.active {
+   opacity:1;
+   pointer-events:initial;
 }
 
 
+.profile-top{
+  height: 15vh;
+  margin: 2em;
+  display: flex;
+  align-items: center;
+}
 
+.animal-profile-image{
+  width: 30vw;
+  height: 30vw;
+  
+}
+
+.animal-profile-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20%;
+
+}
+
+.animal-profile-text{
+  color: var(--color-neutral-light);
+  margin: 0 2em;
+
+}
+.animal-profile-info{
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+
+.profile-top-bg{
+  position: absolute;
+  background-color: var(--color-neutral-dark);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  width: 100vw;
+  height: calc(15vh + 10em);
+  border-radius: 2em;
+  z-index: -1;
+  top:-2.5em;
+}
+
+.profile-bottom{
+
+}
 
 /* FORMS */
 .form-control {
