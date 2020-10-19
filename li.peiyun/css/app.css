@@ -9,7 +9,7 @@
 
 
    --color-neutral-lighter: #edf0ed;
-   --color-neutral-light: #f4e9dc;
+   --color-neutral-light: #efe9e0;
    --color-neutral-mediumer: #b3bdb3;
    --color-neutral-medium: #788578;
    --color-neutral-dark: #494949;
@@ -34,15 +34,12 @@ body {
    background-color:var(--color-neutral-light);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family:var(--font-serif);
-}
+h1{
+  font: sans-serif;
+  color:var(--color-neutral-dark);
+  font-size: 2rem;
 
+}
 
 a {
    color:inherit;
@@ -56,7 +53,11 @@ a:hover {
 
 
 
-
+.filter-container{
+  margin: 1em;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
 
 /* Layout Classes */
 
@@ -68,6 +69,7 @@ a:hover {
 .display-block { display:block; }
 .display-inline-flex { display:inline-flex; }
 .display-inline-block { display:inline-block; }
+.flex-justify-right { justify-content: flex-end; }
 
 .flex-stretch { flex: 1 1 auto; }
 .flex-none { flex:none; }
@@ -134,7 +136,7 @@ a:hover {
    font-size:0.8em;
 }
 #recent-page [data-role='main'] {
-   background-image:url(../img/map.jpg);
+   background-image:url(../img/map.png);
    background-position:center;
    background-size:cover;
 }
@@ -187,6 +189,8 @@ a:hover {
 
 
 
+
+
 .ui-header ul,
 .ui-footer ul {
    position:relative;
@@ -203,12 +207,47 @@ a:hover {
 .ui-footer a {
    display:block;
    padding:0 1em;
+   color: var(--color-neutral-dark);
+}
+
+
+.recent-pin{
+  position:absolute;
+  top: 30vh;
+  left: 20vw;
+}
+
+.recent-pin img{
+  width: 15rem;
 }
 
 
 
+#list-page{
+  background-color: var(--color-neutral-dark);
+}
 
+.filter{
+  display: inline-flex;
+  color:var(--color-neutral-light);
+  padding: 0.2em 1em;
+  margin: 0.2em 0;
+  border: 2px solid var(--color-neutral-light);
+  border-radius: 1em;
+}
 
+.sort{
+  display: inline-flex;
+}
+
+.search, .sort{
+  display: inline-flex;
+  height: 2rem;
+  width: 2rem;
+}
+.search img, .sort img{
+  width: 100%;
+}
 
 
 /* MODALS */
@@ -460,18 +499,26 @@ a:hover {
     display: flex;
     margin: 1em;
     border-radius: 1em;
+    /*background-color: var(--color-neutral-light);*/
+    border: 2px solid var(--color-neutral-light);
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     overflow: hidden;
 }
 .animallist-description {
-   padding:0.5em;
+   font-weight: 400;
+   padding-left: 1em;
+   padding-top: 0.5em;
+   line-height: 1.3em;
+   color:var(--color-neutral-light);
 }
 .animallist-type,
-.animallist-breed {
+.animallist-time{
    font-size:0.8em;
 }
 .animallist-name {
-   font-size:1.2em;
+   font-size:1em;
+   
+   padding-bottom: 0.1em;
 }
 
 
