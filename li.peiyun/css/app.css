@@ -111,7 +111,7 @@ a:hover {
 }
 .tabgroup .contents {
    height:65vh;
-   margin: 0.5em;
+   
    overflow:hidden;
    position:relative;
 }
@@ -121,23 +121,21 @@ a:hover {
    left:0;
    width:100%;
    height:100%;
-   overflow:auto;
+   
    pointer-events:none;
    opacity:0;
    transition:all 0.3s;
   
 }
 
-.content-map{
-object-fit: center;
-height: 100vw;
+.profilemap-container{
+  height: 65vh;
+  overflow: scroll;
 
 }
 
-.content-map img{
-  width: 100vw;
- z-index: -100;
-  margin: auto 0;
+img {
+  width:100%;
 }
 
 .tabgroup .content.active {
@@ -319,11 +317,11 @@ height: 100vw;
 .recent-pin{
   position:absolute;
   top: 30vh;
-  left: 20vw;
+  left: 30vw;
 }
 
 .recent-pin img{
-  width: 15rem;
+  width: 10rem;
 }
 
 
@@ -373,7 +371,7 @@ height: 100vw;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color:rgba(0,0,0,0.7);
+   
 }
 
 
@@ -386,14 +384,7 @@ height: 100vw;
    transition: all 0.3s;
    width:80vw;
 }
-.modal-body {
-    background-color: var(--color-white);
-    padding: 1em;
-}
-.modal-head, .modal-foot {
-    background-color: var(--color-neutral-lighter);
-    padding: 0.5em 1em;
-}
+
 
 
 .modal.active .modal-back,
@@ -411,13 +402,15 @@ height: 100vw;
     display: flex;
     flex-direction: column;
     transition:all 0.3s;
-    box-shadow:0 0 5px rgba(0,0,0,0.3);
+    box-shadow:1px 1px 5px rgba(0,0,0,0.3);
 }
 
 .modal-drawer.left,
 .modal-drawer.right {
    height:100%;
    width:70vw;
+   background-color: var(--color-neutral-light);
+   color: var(--color-neutral-dark);
 }
 .modal-drawer.left { left:0; transform:translateX(-100%); }
 .modal-drawer.right { right:0; transform:translateX(100%); }
@@ -438,6 +431,25 @@ height: 100vw;
 
 .modal-drawer .modal-body {
    flex: 1 1 100%;
+}
+
+.modal-head{
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+  padding: 0.5em 0.8rem;
+}
+
+.modal-text p{
+  font-size: 0.9rem;
+  margin: 0.2em 0.8rem;
+  line-height: 1.15em;
+
+}
+
+.modal-text-title{
+  font-weight: bold;
+  padding-top: 1em;
 }
 
 
@@ -495,7 +507,8 @@ height: 100vw;
 
 /* CIRCLE BUTTON */
 .btn-circle {
-    background-color: white;
+    background-color: var(--color-neutral-light);
+    color: var(--color-neutral-dark);
     line-height: 3rem;
     width: 3rem;
     display: inline-block;
