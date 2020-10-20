@@ -51,8 +51,6 @@ a:hover {
 }
 
 
-
-
 .filter-container{
   margin: 1em;
   margin-bottom: 0;
@@ -196,21 +194,23 @@ img {
     margin: 1em 0;
 }
 .form-label {
-    font-size: 0.8em;
-    color: var(--color-neutral-medium);
-    margin: 0.5rem 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--color-neutral-dark);
+
 }
 .ui-mobile label {
-   margin:0.5rem 0;
+   margin:0.5rem;
 }
 .form-input {
     display: inline-block;
-    width: 100%;
+    background-color: var(--color-neutral-light);
+    width: 90vw;
     border-width: 0;
-    background-color: var(--color-neutral-lighter);
     font: inherit;
-    padding: 0.5em 1em;
-    margin: 0;
+    padding: 0.5em 0;
+    margin: 0 5vw;
+    border-bottom: 1.5px solid var(--color-neutral-dark);
     outline: 0;
 }
 .form-button {
@@ -225,14 +225,63 @@ img {
     text-align: center;
 }
 
+.save-btn{
+ 
+    outline:none;
+    border: none;
+    background-color: transparent;
+    
+    color: var(--color-neutral-dark);
+    font-weight: bold;
+    line-height: 3rem;
+    width: 95vw;
+    display: inline-block;
+    text-align: right;
+    font-size: 1.2em;
+
+
+
+}
 
 
 
 
 #signin-form,
 #signup-form {
-   padding:1em;
+ 
 }
+
+.form-input-cell{
+  display: inline-block;
+    width: 95vw;
+    border-width: 0;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    margin: 0 2.5vw;
+  
+    outline: 0;
+  background-color:white;
+  border-radius: 2em;
+  font-size: 0.9rem;
+
+}
+
+.form-button-cell{
+  display: block;
+  width: 40vw;
+  margin: 1em 30vw;
+  margin-top: 2em;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 2em;
+  outline:0;
+  background-color: var(--color-neutral-dark);
+  color: white;
+  font-size: 0.9em;
+
+
+}
+
 .signin-alt {
    padding:1em;
    text-align:center;
@@ -243,6 +292,7 @@ img {
    background-position:center;
    background-size:cover;
 }
+
 
 
 
@@ -581,7 +631,9 @@ img {
 
 
 
-
+#settings-page{
+  background-color: var(--color-neutral-dark);
+}
 
 .settings-list {
    list-style-type:none;
@@ -590,9 +642,10 @@ img {
 }
 
 .settings-item a {
+  color: var(--color-neutral-light);
    display:block;
-   padding:0.5em 1em;
-   border-bottom:1px solid var(--color-neutral-lighter);
+   padding:0.9em 1em;
+   border-bottom:2px solid var(--color-neutral-light);
    position:relative;
 }
 .settings-item a:not([href='#'])::after {

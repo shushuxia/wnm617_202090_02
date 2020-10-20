@@ -21,19 +21,19 @@
    <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
          <div class="flex-stretch display-flex flex-align-center flex-justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="icon" style="width:80vw;height:80vw;"><defs><style>.stroke-thin-center{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:4px;}</style></defs><title>thumbs-up</title><path d="M50,25V45H75.86l-2.93,2.93L70,50.86V74a1,1,0,0,1-1,1H20V55h5A20,20,0,0,0,45,35V25h5m0-10H40a5,5,0,0,0-5,5V35A10,10,0,0,1,25,45H10V85H69A11,11,0,0,0,80,74V55l2.93-2.93a10,10,0,0,0,0-14.14L80,35H60V25A10,10,0,0,0,50,15Z"></path><line class="stroke-thin-center" x1="30" y1="79" x2="30" y2="50"></line></svg>
+            <img src="img/logo.png">
          </div>
          <form id="signin-form" data-ajax="false">
             <div class="form-control">
                <label for="signin-username" class="form-label">Username</label>
-               <input id="signin-username" type="text" class="form-input" data-role="none" placeholder="Type your username">
+               <input id="signin-username" type="text" class="form-input-cell" data-role="none" placeholder="Type your username">
             </div>
             <div class="form-control">
                <label for="signin-password" class="form-label">Password</label>
-               <input id="signin-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
+               <input id="signin-password" type="password" class="form-input-cell" data-role="none" placeholder="Type your password">
             </div>
             <div class="form-control">
-               <input type="submit" class="form-button" value="Sign In" data-role="none">
+               <input type="submit" class="form-button-cell" value="Sign In" data-role="none">
             </div>
             <div class="form-control signin-alt">
                Don't have an account?
@@ -48,18 +48,18 @@
          <form id="signup-form" data-ajax="false">
             <div class="form-control">
                <label for="signup-username" class="form-label">Username</label>
-               <input id="signup-username" type="text" class="form-input" data-role="none" placeholder="Type your username">
+               <input id="signup-username" type="text" class="form-input-cell" data-role="none" placeholder="Type your username">
             </div>
             <div class="form-control">
                <label for="signup-password" class="form-label">Password</label>
-               <input id="signup-password" type="password" class="form-input" data-role="none" placeholder="Type your password">
+               <input id="signup-password" type="password" class="form-input-cell" data-role="none" placeholder="Type your password">
             </div>
             <div class="form-control">
                <label for="signup-password-confirm" class="form-label">Confirm Password</label>
-               <input id="signup-password-confirm" type="password" class="form-input" data-role="none" placeholder="Type your password">
+               <input id="signup-password-confirm" type="password" class="form-input-cell" data-role="none" placeholder="Type your password">
             </div>
             <div class="form-control">
-               <a href="#recent-page" class="form-button">Sign Up</a>
+               <a href="#recent-page" class="form-button-cell">Sign Up</a>
             </div>
             <div class="form-control signin-alt">
                Already have an account?
@@ -79,7 +79,7 @@
          
       
          <div class="floater bottom right">
-            <div class="btn-circle" data-toggle="#recent-profile-modal">&plus;</div>
+            <div class="btn-circle"><a href="#add-page">&plus;</a></div>
          </div>
       
 
@@ -124,7 +124,7 @@
          <h1>Tracked Animals</h1>
          <ul>
             <li class="flex-stretch"></li>
-            <li><a href="#" data-activate="#list-add-modal">&plus;</a></li>
+            <li><a href="#add-page">&plus;</a></li>
          </ul>
       </header>
       <div class="filter-container display-flex">
@@ -231,6 +231,45 @@
       
    </section>
 
+   <section data-role="page" id="add-page">
+      <header data-role="header">
+         <h1>Add New Tracking</h1>
+         <ul>
+            
+            <li><a href="#" data-rel="back">&larr;</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" data-rel="back">Save</a></li>
+         
+         </ul>
+      </header>
+      <div class="form-control">
+                  <label for="list-add-name" class="form-label">Name</label>
+                  <input id="list-add-name" type="text" class="form-input" data-role="none" placeholder="Type animal name">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-type" class="form-label">Type</label>
+                  <input id="list-add-type" type="text" class="form-input" data-role="none" placeholder="Type animal type">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-location" class="form-label">Location</label>
+                  <input id="list-add-location" type="text" class="form-input" data-role="none" placeholder="Type animal location">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-weight" class="form-label">Weight</label>
+                  <input id="list-add-weight" type="text" class="form-input" data-role="none" placeholder="Type animal weight">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-health" class="form-label">Health Condition</label>
+                  <input id="list-add-health" type="text" class="form-input" data-role="none" placeholder="Type animal health condition">
+               </div>
+            </div>
+            <!--
+            <div>
+               <input class="save-btn"type="submit" value="Save" data-role="none">
+            </div>
+         -->
+   </section>
+
 
 
 
@@ -284,7 +323,7 @@
       <header data-role="header">
          <h1>Settings Page</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back">&larr;</a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -300,12 +339,12 @@
       <header data-role="header">
          <h1>Profile Settings</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back">&larr;</a></li>
             <li class="flex-stretch"></li>
             <li><a href="#" data-rel="back">Save</a></li>
          </ul>
       </header>
-      <div data-role="main" style="padding:1em">
+      <div data-role="main">
          <form id="profile-form" data-ajax="false">
             <div class="form-control">
                <label for="profile-username" class="form-label">Username</label>
@@ -327,12 +366,12 @@
       <header data-role="header">
          <h1>Password Settings</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back">&larr;</a></li>
             <li class="flex-stretch"></li>
             <li><a href="#" data-rel="back">Save</a></li>
          </ul>
       </header>
-      <div data-role="main" style="padding:1em">
+      <div data-role="main">
          <form id="password-form" data-ajax="false">
             <div class="form-control">
                <label for="password-oldpassword" class="form-label">Old Password</label>
