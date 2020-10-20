@@ -141,6 +141,15 @@ img {
    pointer-events:initial;
 }
 
+.content-history{
+  padding: 0.5em;
+}
+
+.content-title{
+  padding-top: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
 .profile-top{
   height: 15vh;
@@ -514,14 +523,27 @@ img {
    outline:0;
 }
 
-
-
+.pin-container{
+  align-items: center;
+}
+.pin-icon{
+  width: 2.5em;
+  float: left;
+  padding-top: 1em;
+}
+.pin-text{
+  margin:0;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+  display: inline-block;
+}
 
 /* MODAL TOAST */
 .modal-toast {
    position: absolute;
    width: 50%;
-   background-color: #e7ff3f;
+   background-color: var(--color-main-medium);
+   color: white;
    box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
    border-radius: 0.2em;
    padding: 1em;
